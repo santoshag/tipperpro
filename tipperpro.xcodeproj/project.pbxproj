@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC89D9181C93309700E232D2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC89D9171C93309700E232D2 /* SettingsViewController.swift */; };
+		AC9450E01C995CC800BE7549 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = AC9450DF1C995CC800BE7549 /* README.md */; };
+		ACC3AA971C97D46B0054B0D6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC3AA961C97D46B0054B0D6 /* CoreLocation.framework */; };
 		ACF5A7321C909D700057E0E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5A7311C909D700057E0E1 /* AppDelegate.swift */; };
-		ACF5A7341C909D700057E0E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5A7331C909D700057E0E1 /* ViewController.swift */; };
+		ACF5A7341C909D700057E0E1 /* TipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5A7331C909D700057E0E1 /* TipViewController.swift */; };
 		ACF5A7371C909D700057E0E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF5A7351C909D700057E0E1 /* Main.storyboard */; };
 		ACF5A7391C909D700057E0E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACF5A7381C909D700057E0E1 /* Assets.xcassets */; };
 		ACF5A73C1C909D700057E0E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACF5A73A1C909D700057E0E1 /* LaunchScreen.storyboard */; };
@@ -34,9 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC89D9171C93309700E232D2 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		AC9450DF1C995CC800BE7549 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		ACC3AA961C97D46B0054B0D6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		ACF5A72E1C909D700057E0E1 /* tipperpro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tipperpro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF5A7311C909D700057E0E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ACF5A7331C909D700057E0E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ACF5A7331C909D700057E0E1 /* TipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipViewController.swift; sourceTree = "<group>"; };
 		ACF5A7361C909D700057E0E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ACF5A7381C909D700057E0E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACF5A73B1C909D700057E0E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACC3AA971C97D46B0054B0D6 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,9 +81,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC89D9141C932FE300E232D2 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AC89D9171C93309700E232D2 /* SettingsViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		ACF5A7251C909D700057E0E1 = {
 			isa = PBXGroup;
 			children = (
+				ACC3AA961C97D46B0054B0D6 /* CoreLocation.framework */,
 				ACF5A7301C909D700057E0E1 /* tipperpro */,
 				ACF5A7451C909D700057E0E1 /* tipperproTests */,
 				ACF5A7501C909D700057E0E1 /* tipperproUITests */,
@@ -97,12 +113,14 @@
 		ACF5A7301C909D700057E0E1 /* tipperpro */ = {
 			isa = PBXGroup;
 			children = (
+				AC89D9141C932FE300E232D2 /* View Controllers */,
 				ACF5A7311C909D700057E0E1 /* AppDelegate.swift */,
-				ACF5A7331C909D700057E0E1 /* ViewController.swift */,
+				ACF5A7331C909D700057E0E1 /* TipViewController.swift */,
 				ACF5A7351C909D700057E0E1 /* Main.storyboard */,
 				ACF5A7381C909D700057E0E1 /* Assets.xcassets */,
 				ACF5A73A1C909D700057E0E1 /* LaunchScreen.storyboard */,
 				ACF5A73D1C909D700057E0E1 /* Info.plist */,
+				AC9450DF1C995CC800BE7549 /* README.md */,
 			);
 			path = tipperpro;
 			sourceTree = "<group>";
@@ -193,6 +211,7 @@
 				TargetAttributes = {
 					ACF5A72D1C909D700057E0E1 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = Y6R7EDZYEP;
 					};
 					ACF5A7411C909D700057E0E1 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -256,8 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACF5A7341C909D700057E0E1 /* ViewController.swift in Sources */,
+				ACF5A7341C909D700057E0E1 /* TipViewController.swift in Sources */,
 				ACF5A7321C909D700057E0E1 /* AppDelegate.swift in Sources */,
+				AC9450E01C995CC800BE7549 /* README.md in Sources */,
+				AC89D9181C93309700E232D2 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,10 +420,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tipperpro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = santoshag.tipperpro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -410,10 +435,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = tipperpro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = santoshag.tipperpro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -484,6 +513,7 @@
 				ACF5A7581C909D700057E0E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACF5A7591C909D700057E0E1 /* Build configuration list for PBXNativeTarget "tipperproTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +522,7 @@
 				ACF5A75B1C909D700057E0E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACF5A75C1C909D700057E0E1 /* Build configuration list for PBXNativeTarget "tipperproUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +531,7 @@
 				ACF5A75E1C909D700057E0E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
