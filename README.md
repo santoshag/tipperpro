@@ -21,6 +21,6 @@ Notes:
 This only works for iPhone Retina 6" in Portrait orientation. 
 Spent time for geocoding current location and provide statistics to user. Reference: http://mhorga.org/2015/08/14/geocoding-in-ios.html
 
-![Video Walkthrough](anim_tip_calculator.gif)
+![Video Walkthrough](features_demo.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
