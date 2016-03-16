@@ -54,7 +54,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate  {
         changeToGradientBackground()
         setBillFieldLocalCurrencyPlaceHolder()
         loadInsights()
-        saveTipButton.hidden = true
     }
     
     //set locale based currency symbol
@@ -105,7 +104,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate  {
             if   (CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse ||
                 CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedAlways)
             {
-                return((locManager.location?.coordinate.latitude)!, (locManager.location?.coordinate.longitude)!)
+                if locManager.location != nil{
+                    return((locManager.location?.coordinate.latitude)!, (locManager.location?.coordinate.longitude)!)
+                }
             }
             //return empty CLLocationDegrees if location not found
             return(CLLocationDegrees(), CLLocationDegrees())
@@ -125,7 +126,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate  {
         if saveTip{
             //we store 2 items in the persistence storage 1. number of times visited to current location
             //2. average tip percentage
-            var numberOfVisitsToCurrentLocation = defaults.integerForKey(locationKey)
+            let numberOfVisitsToCurrentLocation = defaults.integerForKey(locationKey)
             defaults.setObject(numberOfVisitsToCurrentLocation + 1, forKey: locationKey)
             
             var averageTip = Double()
@@ -261,9 +262,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate  {
             changeVisibility(false)
             calculateNewBill()
         }else{
-            saveTipButton.hidden = true
             changeVisibility(true)
-            saveTipButton.hidden = false
         }
     }
     
